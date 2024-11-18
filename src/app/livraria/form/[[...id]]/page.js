@@ -111,8 +111,8 @@ export default function Page({ params }) {
                 isInvalid={!!errors.situacao}
               >
                 <option value="">Selecione</option>
-                <option value="Ativo">aberto</option>
-                <option value="Inativo">fechado</option>
+                <option value="Ativo">ativo</option>
+                <option value="Inativo">Inativo</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">
                 {errors.situacao}
