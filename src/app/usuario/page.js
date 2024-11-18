@@ -36,7 +36,7 @@ export default function Page() {
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
-            <th>Data de Nascimento</th>
+        
           </tr>
         </thead>
         <tbody>
@@ -56,7 +56,7 @@ export default function Page() {
               <td>{item.nome}</td>
               <td>{item.email}</td>
               <td>{item.telefone}</td>
-              <td>{item.data_nascimento}</td>
+              
             </tr>
           ))}
         </tbody>
