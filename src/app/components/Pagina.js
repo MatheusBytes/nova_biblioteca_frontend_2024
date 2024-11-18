@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { IoLibrary } from "react-icons/io5";
 
 export default function Pagina(props) {
   return (
@@ -8,7 +9,7 @@ export default function Pagina(props) {
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="/" className="fw-bold">
-            Biblioteca 
+          <IoLibrary />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
