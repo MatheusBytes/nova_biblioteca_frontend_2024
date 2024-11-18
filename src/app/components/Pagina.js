@@ -8,7 +8,7 @@ export default function Pagina(props) {
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="/" className="fw-bold">
-            Biblioteca 2024
+            Biblioteca 
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

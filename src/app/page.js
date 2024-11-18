@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div style={{ textAlign: "center", padding: "2rem", fontFamily: "Arial, sans-serif" }}>
     
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "1.5rem" }}>Bem-vindo à Biblioteca 2024</h1>
+      <h1 style={{ fontSize: "2.5rem", marginBottom: "1.5rem" }}>Bem-vindo à Biblioteca </h1>
       <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
         Escolha uma das opções abaixo para gerenciar os dados da biblioteca:
       </p>
