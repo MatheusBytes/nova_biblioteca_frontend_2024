@@ -1,95 +1,62 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { FaUserAlt } from "react-icons/fa";
+import { IoBookSharp } from "react-icons/io5";
+import { MdCategory, MdLibraryBooks } from "react-icons/md";
+import { FaBuilding } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div style={{ textAlign: "center", padding: "2rem", fontFamily: "Arial, sans-serif" }}>
+    
+      <h1 style={{ fontSize: "2.5rem", marginBottom: "1.5rem" }}>Bem-vindo à Biblioteca 2024</h1>
+      <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
+        Escolha uma das opções abaixo para gerenciar os dados da biblioteca:
+      </p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+      
+      <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
+        <a href="/usuario" style={linkStyle}>
+          <FaUserAlt style={iconStyle} />
+          Usuários
         </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+        <a href="/livro" style={linkStyle}>
+          <IoBookSharp style={iconStyle} />
+          Livros
         </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        <a href="/genero" style={linkStyle}>
+          <MdCategory style={iconStyle} />
+          Gêneros
         </a>
+        <a href="/livraria" style={linkStyle}>
+          <FaBuilding style={iconStyle} />
+          Livrarias
+        </a>
+        <a href="/autor" style={linkStyle}>
+          <MdLibraryBooks style={iconStyle} />
+          Autores
+        </a>
+      </div>
+
+      
+      <footer style={{ marginTop: "3rem", fontSize: "0.9rem", color: "#555" }}>
+        © 2024 Biblioteca 2024. Todos os direitos reservados.
       </footer>
     </div>
   );
 }
+
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "#0070f3",
+  fontSize: "1.5rem",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: "0.5rem",
+  transition: "color 0.2s ease-in-out",
+};
+
+const iconStyle = {
+  fontSize: "2.5rem",
+  color: "#0070f3",
+};

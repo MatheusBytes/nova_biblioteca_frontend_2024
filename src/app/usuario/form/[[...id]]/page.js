@@ -1,6 +1,7 @@
 'use client'
 
 import Pagina from "@/app/components/Pagina";
+import UsuarioValidator from "@/app/validators/UsuarioValidator";
 import { Formik } from "formik";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -32,6 +33,7 @@ export default function Page({ params }) {
     <Pagina titulo="Usuário">
       <Formik
         initialValues={usuario}
+        validationSchema={UsuarioValidator}
         onSubmit={values => salvar(values)}
       >
         {({

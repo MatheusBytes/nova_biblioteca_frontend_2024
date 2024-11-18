@@ -1,6 +1,7 @@
 'use client'
 
 import Pagina from "@/app/components/Pagina";
+import GeneroValidator from "@/app/validators/GeneroValidator";
 import { Formik } from "formik";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -32,6 +33,7 @@ export default function Page({ params }) {
     <Pagina titulo="Gênero">
       <Formik
         initialValues={genero}
+        validationSchema={GeneroValidator}
         onSubmit={values => salvar(values)}
       >
         {({

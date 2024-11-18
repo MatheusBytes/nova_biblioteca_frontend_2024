@@ -4,30 +4,46 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 export default function Pagina(props) {
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Navbar */}
-      <Navbar bg="dark" data-bs-theme="dark">
+     
+      <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="/">inicío</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/autor">autores</Nav.Link>
-            <Nav.Link href="/usuario">usuarios</Nav.Link>
-            <Nav.Link href="/livraria">livrarias</Nav.Link>
-            <Nav.Link href="/livro">livros</Nav.Link>
-            <Nav.Link href="/genero">genero</Nav.Link>
-          </Nav>
+          <Navbar.Brand href="/" className="fw-bold">
+            Biblioteca 2024
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/autor" className="text-white">
+                Autores
+              </Nav.Link>
+              <Nav.Link href="/usuario" className="text-white">
+                Usuários
+              </Nav.Link>
+              <Nav.Link href="/livraria" className="text-white">
+                Livrarias
+              </Nav.Link>
+              <Nav.Link href="/livro" className="text-white">
+                Livros
+              </Nav.Link>
+              <Nav.Link href="/genero" className="text-white">
+                Gêneros
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Conteúdo */}
-      <div className="bg-secondary text-white text-center p-3">
-        <h1 className="page-title">{props.titulo}</h1>
+      
+      <div className="bg-light text-dark text-center py-4 border-bottom">
+        <h1 className="page-title fw-bold" style={{ fontSize: "2.5rem" }}>
+          {props.titulo}
+        </h1>
       </div>
-      <Container className="flex-grow-1 ">{props.children}</Container>
-
 
      
+      <Container className="flex-grow-1 py-4">{props.children}</Container>
 
-      {/* Footer */}
+     
       <footer className="bg-primary text-white text-center py-4 mt-auto">
         <Container>
           <p className="mb-2">
