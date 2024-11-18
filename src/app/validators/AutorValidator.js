@@ -9,8 +9,9 @@ const AutorValidator = Yup.object().shape({
     telefone: Yup.string()
         .required('Campo obrigatório')
         .matches(/^\(\d{2}\) \d{5}-\d{4}$/, 'Telefone inválido'),
-    generoLiterario: Yup.string()
+        genero_literario: Yup.string()
         .required('Campo obrigatório'),
+
 });
 
 export default AutorValidator;
